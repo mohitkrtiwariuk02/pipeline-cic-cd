@@ -16,8 +16,6 @@ on:
 jobs:
   build:
     name: my first job
-  build_master: 
-    name: my 2nd job
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
@@ -46,7 +44,7 @@ jobs:
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
+  pull_request:
     branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
@@ -55,7 +53,8 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 
   # This workflow contains a single job called "build"
-  build_master:
+  build_master: 
+    name: my 2nd job
     # The type of runner that the job will run on
     runs-on: label-1
 
