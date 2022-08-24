@@ -33,7 +33,11 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          rsync -rav . /home/ubuntu/www/html/
+          rm -rf /var/www/html/*
+          cp -r * /var/www/html/
+          rm -rf *
+          chown -R www-data:www-data //var/www/html/
+          chmod -R 755 /var/www/html/
 
           # This is a basic workflow to help you get started with Actions
 
@@ -56,6 +60,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          rsync -rav . /home/ubuntu/www/html/
-
+          rm -rf /var/www/html/*
+          cp -r * /var/www/html/
+          rm -rf *
+          chown -R www-data:www-data //var/www/html/
+          chmod -R 755 /var/www/html/
           # This is a basic workflow to help you get started with Actions
