@@ -1,3 +1,8 @@
+jobs:
+  stage:  
+     name: stage job
+  live:
+     name: live job
 # This is a basic workflow to help you get started with Actions
 
 name: stage
