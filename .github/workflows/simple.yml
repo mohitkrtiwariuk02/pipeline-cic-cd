@@ -52,7 +52,9 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 
-  # This workflow contains a single job called "build"
+ 
+# This workflow contains a single job called "build"
+Jobs:
   build_master: 
     name: my 2nd job
     # The type of runner that the job will run on
