@@ -7,14 +7,14 @@ name: Qlo Deploy
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "stage" "main" ]
-
+    branches: [ "main" ]
+  push:
+    branches: [ "stage" ]
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+ # workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-
   build:
     # The type of runner that the job will run on
     runs-on: label-2
@@ -25,8 +25,8 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+ #     - name: Run a one-line script
+  #      run: echo Hello, world!
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
