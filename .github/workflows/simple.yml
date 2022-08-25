@@ -15,7 +15,7 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: label-2
-only:
+ only:
     refs:
         - merge_requests
     variables:
@@ -41,7 +41,7 @@ only:
  
  build_master:
     runs-on: live
- only:
+  only:
    refs:
       - merge_requests
    variables:
