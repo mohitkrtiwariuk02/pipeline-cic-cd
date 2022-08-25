@@ -32,6 +32,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          sudo rm -rf /home/ubuntu/www/html/*
           rsync -rav . /home/ubuntu/www/html/
           # This is a basic workflow to help you get started with Actions
   build_master: 
@@ -53,5 +54,6 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          sudo rm -rf /home/ubuntu/www/html/*
           rsync -rav . /home/ubuntu/www/html/
           # This is a basic workflow to help you get started with Actions
