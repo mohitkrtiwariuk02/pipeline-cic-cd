@@ -13,11 +13,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
-only:
-    refs:
-        - merge_requests
-    variables:
-        - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "stage"  
+ 
     # The type of runner that the job will run on
     runs-on: label-2
 
@@ -41,11 +37,7 @@ only:
  
   build_master: 
     name: my 2nd job
-  only:
-    refs:
-        - merge_requests
-    variables:
-        - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"  
+ 
     # The type of runner that the job will run on
     runs-on: live
 
