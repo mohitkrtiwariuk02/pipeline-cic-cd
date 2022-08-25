@@ -43,7 +43,7 @@ jobs:
     name: my 2nd job
     # The type of runner that the job will run on
     runs-on: live
-   only:
+  only:
     refs:
         - merge_requests
     variables:
@@ -65,4 +65,3 @@ jobs:
           echo test, and deploy your project.
           sudo rm -rf /home/ubuntu/www/html/*
           rsync -rav . /home/ubuntu/www/html/
-          # This is a basic workflow to help you get started with Actions
