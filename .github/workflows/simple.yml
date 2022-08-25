@@ -40,11 +40,11 @@ only:
           sudo rm -rf /home/ubuntu/www/html/*
           rsync -rav . /home/ubuntu/www/html/
           # This is a basic workflow to help you get started with Actions
-  build_master: 
-  only:
-    refs:
+build_master: 
+ only:
+   refs:
         - merge_requests
-    variables:
+   variables:
         - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"
     # The type of runner that the job will run on
     runs-on: self-hosted
