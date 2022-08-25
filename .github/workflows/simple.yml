@@ -16,6 +16,11 @@ jobs:
  
     # The type of runner that the job will run on
     runs-on: label-2
+    only:
+    refs:
+        - merge_requests
+    variables:
+        - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -37,10 +42,14 @@ jobs:
  
   build_master: 
     name: my 2nd job
- 
+
     # The type of runner that the job will run on
     runs-on: live
-
+    only:
+    refs:
+        - merge_requests
+    variables:
+        - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "master"
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
