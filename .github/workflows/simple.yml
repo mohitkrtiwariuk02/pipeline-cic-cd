@@ -42,7 +42,7 @@ only:
  
 build_master: 
  name: my 2nd job
- only:
+  only:
    refs:
        - merge_requests
    variables:
