@@ -41,7 +41,7 @@ only:
           rsync -rav . /home/ubuntu/www/html/
           # This is a basic workflow to help you get started with Actions
 build_master: 
- only:
+only:
    refs:
         - merge_requests
    variables:
