@@ -13,14 +13,13 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
- 
-    # The type of runner that the job will run on
-    runs-on: label-2
     only:
     refs:
         - merge_requests
     variables:
-        - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "stage"
+        - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "stage"    
+    # The type of runner that the job will run on
+    runs-on: label-2
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -42,14 +41,14 @@ jobs:
  
   build_master: 
     name: my 2nd job
-
-    # The type of runner that the job will run on
-    runs-on: live
     only:
     refs:
         - merge_requests
     variables:
         - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main"
+    # The type of runner that the job will run on
+    runs-on: live
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
