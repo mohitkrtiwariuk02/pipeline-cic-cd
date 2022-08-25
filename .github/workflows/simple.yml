@@ -39,12 +39,12 @@ only:
           rsync -rav . /home/ubuntu/www/html/
           # This is a basic workflow to help you get started with Actions
  
- build_master:
+  build_master:
     runs-on: live
- only:
-   refs:
+   only:
+    refs:
       - merge_requests
-   variables:
+    variables:
       - $CI_MERGE_REQUEST_TARGET_BRANCH_NAME == "main" 
 
     # Steps represent a sequence of tasks that will be executed as part of the job
