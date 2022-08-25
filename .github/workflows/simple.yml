@@ -43,7 +43,7 @@ jobs:
     name: my 2nd job
     # The type of runner that the job will run on
     runs-on: live
-   only:
+  only:
     refs:
         - merge_requests
     variables:
